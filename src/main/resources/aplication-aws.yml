@@ -1,0 +1,35 @@
+spring:
+
+  thymeleaf:
+    check-template: true
+    check-template-location: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: file:./classes/templates/
+    suffix: .html
+    cache: false
+    servlet:
+      content-type: text/html
+
+  mvc:
+    locale: pl_PL
+    locale-resolver: fixed
+
+  datasource:
+    url: jdbc:mysql://database-1.cmaplen7lwm5.eu-central-1.rds.amazonaws.com:3307/charitydonation?useSSL=false&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: darkeduar
+    password: Dupa1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    jpa:
+      show-sql: true
+      database-platform: MYSQL
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate.dialect: org.hibernate.dialect.MySQL57InnoDBDialect
+        port: 8080
+
+    server:
+      port: 8080
