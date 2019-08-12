@@ -1,34 +1,17 @@
 package pl.coderslab.charity.donation;
 
-import org.springframework.format.annotation.DateTimeFormat;
-import pl.coderslab.charity.category.Category;
-import pl.coderslab.charity.institution.Institution;
+public class DonationDto {
 
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Set;
-
-@Entity
-public class Donation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long quantity;
-    @OneToMany
-    private Set<Category> categories;
-    @OneToOne
-    private Institution institution;
+    private long[] categories;
+    private long institution;
     private String street;
     private String city;
     private String zipCode;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate pickUpDate;
-    @DateTimeFormat(pattern = "hh:mm")
-    private LocalTime pickUpTime;
+    private String pickUpDate;
+    private String pickUpTime;
     private String pickUpComment;
-
 
     public Long getId() {
         return id;
@@ -46,19 +29,19 @@ public class Donation {
         this.quantity = quantity;
     }
 
-    public Set<Category> getCategories() {
+    public long[] getCategories() {
         return categories;
     }
 
-    public void setCategories(Set<Category> categories) {
+    public void setCategories(long[] categories) {
         this.categories = categories;
     }
 
-    public Institution getInstitution() {
+    public long getInstitution() {
         return institution;
     }
 
-    public void setInstitution(Institution institution) {
+    public void setInstitution(long institution) {
         this.institution = institution;
     }
 
@@ -86,19 +69,19 @@ public class Donation {
         this.zipCode = zipCode;
     }
 
-    public LocalDate getPickUpDate() {
+    public String getPickUpDate() {
         return pickUpDate;
     }
 
-    public void setPickUpDate(LocalDate pickUpDate) {
+    public void setPickUpDate(String pickUpDate) {
         this.pickUpDate = pickUpDate;
     }
 
-    public LocalTime getPickUpTime() {
+    public String getPickUpTime() {
         return pickUpTime;
     }
 
-    public void setPickUpTime(LocalTime pickUpTime) {
+    public void setPickUpTime(String pickUpTime) {
         this.pickUpTime = pickUpTime;
     }
 
@@ -109,5 +92,4 @@ public class Donation {
     public void setPickUpComment(String pickUpComment) {
         this.pickUpComment = pickUpComment;
     }
-
 }

@@ -164,6 +164,42 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 5;
 
       // TODO: get data from inputs and show them in summary
+
+        let bagQuant = document.getElementById('quantity').value;
+        document.getElementById('summaryBagQuantity').innerText = bagQuant;
+
+        let summInstitutionName = document.querySelector('#institutionCheck:checked').nextElementSibling.nextElementSibling.firstChild.nextSibling.textContent;
+        document.getElementById('summaryInstitutionName').innerText = summInstitutionName;
+
+        let summStreet = document.getElementById('street').value;
+        document.getElementById('summaryStreet').innerText = summStreet;
+
+        let summCity = document.getElementById('city').value;
+        document.getElementById('summaryCity').innerText = summCity;
+
+        let summZipCode = document.getElementById('zipCode').value;
+        document.getElementById('summaryZipCode').innerText = summZipCode;
+
+        // let summStreet = document.getElementById('street').value;
+        // document.getElementById('summaryStreet').innerText = summStreet;
+
+        let summDate = document.getElementById('date').value;
+        document.getElementById('summaryDate').innerText = summDate;
+
+        let summTime = document.getElementById('time').value;
+        document.getElementById('summaryTime').innerText = summTime;
+
+        let summComment = document.getElementById('comment').value;
+        document.getElementById('summaryComment').innerText = summComment;
+
+        if (bagQuant == 1){
+          document.getElementById('bags').textContent = 'worek.';
+        } else if (bagQuant > 1 && bagQuant < 5){
+          document.getElementById('bags').textContent = 'worki.';
+        } else {
+          document.getElementById('bags').textContent = 'worków.';
+        }
+
     }
 
   }
@@ -171,4 +207,6 @@ document.addEventListener("DOMContentLoaded", function() {
   if (form !== null) {
     new FormSteps(form);
   }
+
+
 });

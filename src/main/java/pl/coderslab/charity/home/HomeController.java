@@ -1,4 +1,4 @@
-package pl.coderslab.charity;
+package pl.coderslab.charity.home;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

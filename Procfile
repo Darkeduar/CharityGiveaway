@@ -1,0 +1,1 @@
+web: java -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -jar server-api-fat.jar
