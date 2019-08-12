@@ -27,10 +27,8 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
 
         http.authorizeRequests()
-//                .antMatchers("/api/users/*/enable").permitAll()
-//                .antMatchers("/landing_page.jsp**").permitAll()
-//                .antMatchers("/**").permitAll()
-                .anyRequest().permitAll();
+                .antMatchers("/admin**").access("hasRole('ADMIN')");
+//                .antMatchers("/**").permitAll();
 
         http.formLogin()
                 .usernameParameter("email")

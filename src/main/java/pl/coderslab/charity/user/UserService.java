@@ -25,7 +25,7 @@ public class UserService {
         this.roleRepository = roleRepository;
     }
 
-    public UserDto createUser(UserDto userDto){
+    public void createUser(UserDto userDto){
         User user = new User();
         user.setEmail(userDto.getEmail());
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
@@ -33,7 +33,6 @@ public class UserService {
         Role userRole = roleRepository.findByName("ROLE_USER");
         user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
-        return null;
     }
 
     public void enableUser(String uuid){

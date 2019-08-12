@@ -20,4 +20,20 @@ public class InstitutionService {
     public List<Institution> getAllInstitutions(){
         return institutionRepository.findAll();
     }
+
+    public void createInstitution(Institution institution){
+        institutionRepository.save(institution);
+    }
+
+    public void editInstitution(Institution institution){
+        institutionRepository.save(institution);
+    }
+
+    public Institution getInstitutionById(Long id){
+        return institutionRepository.getOne(id);
+    }
+
+    public void deleteInstitution(Long id){
+        institutionRepository.delete(institutionRepository.getOne(id));
+    }
 }
