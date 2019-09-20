@@ -1,12 +1,30 @@
-<img alt="Logo" src="http://coderslab.pl/svg/logo-coderslab.svg" width="400">
+# CharityGiveaway
 
+I'm developing a website where users can share their goods with those in need. Easy to use multistep form will guide you to choose the charity and provide all necessary information to schedule a pickup date.
 
-Przed przystąpieniem do pracy  przeczytaj poniższe wskazówki.
-## Jak zacząć?
+## How to use?
 
-1. Zaimportuj projekt jako projekt `Maven`, wg poniższych wskazówek:
+Currently WIP but if you want you can clone this repository and then open the project in your IDE.
+I'm using InteliJ Idea and if you too, then simply go to File > Open.. and choose the folder where you've cloned repository.
+Any feedback is very appreciated and if you want to contribute just make a pullrequest with your suggestions!
 
-	* W `IntelliJ` wybieramy: `File –> New –> Project from Existing Sources...`
-	* Wskazujemy lokalizację katalogu ze sklonowanym projektem i zatwierdzamy.
-	* Następnie w nowym oknie wybieramy: `Import project from external model` i wskazujemy `Maven`
-	* Wybieramy kolejno opcje: `Next –> Next –> Next –> Finish`
+## Technologies used
+
+```Back-end
+- Java 8
+- Spring Boot 2
+- Spring Data JPA
+- Spring Security
+- Hibernate
+
+Front-End
+- HTML 
+- CSS
+- JSP
+- JavaScript
+- jQuery
+```
+
+## Live demo
+
+Demo available soon, stay tuned!
